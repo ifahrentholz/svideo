@@ -4,6 +4,7 @@
   "description": "Frontend build pipeline for AEM-Archetype projects",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --open",
     "dev": "webpack --mode development"
   },
   "keywords": [
