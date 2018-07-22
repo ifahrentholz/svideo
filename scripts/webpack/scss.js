@@ -7,8 +7,8 @@ export default () => ({
   plugins: [
     // Create a [name].css file in filesystem
     new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css",
+      filename: "css/[name].css",
+      chunkFilename: "css/[id].css",
     }),
   ],
   module: {
