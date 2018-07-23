@@ -1,5 +1,6 @@
 import path from "path";
 import webpackMerge from "webpack-merge";
+import HardSourceWebpackPlugin from "hard-source-webpack-plugin";
 
 import handleSCSS from "./scripts/webpack/scss";
 import handleES6 from "./scripts/webpack/es6";
@@ -10,9 +11,12 @@ export default (env, argv) => {
   return webpackMerge({
     devtool: "source-map",
     output: {
-      path: path.resolve(__dirname, "dist/static"),
+      path: path.resolve(__dirname, "dist"),
       filename: "js/[name].js"
-    }
+    },
+    plugins: [
+      new HardSourceWebpackPlugin()
+    ]
   },
     devServer(),
     handleSCSS(),
