@@ -3,7 +3,6 @@ import webpackMerge from "webpack-merge";
 
 import handleSCSS from "./scripts/webpack/scss";
 import handleES6 from "./scripts/webpack/es6";
-import copy from "./scripts/webpack/copy";
 import htmlInjector from "./scripts/webpack/html";
 import devServer from "./scripts/webpack/dev-server";
 
@@ -19,5 +18,5 @@ export default (env, argv) => {
     handleSCSS(),
     handleES6(),
     htmlInjector()
-  ); 
+  );
 };
